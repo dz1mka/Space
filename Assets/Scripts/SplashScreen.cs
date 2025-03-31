@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called befor
+    // e the first frame update
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         Invoke("FirstLevelLoad", 2f);
